@@ -1,25 +1,19 @@
-//
-//  ViewController.m
-//  MXAlertView
-//
-//  Created by Michael on 2018/1/18.
-//  Copyright © 2018年 Michael. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "MXAlertView.h"
+`MXAlertView` is a easy popView to use !
 
-@interface ViewController () <MXAlertViewDataSource>
+## Screenshots
 
-@end
+选择按钮一个 | 选择按钮两个 | 选择按钮三个 | 自定义accessoryView
+---|----|----|-----
+<image src="https://user-images.githubusercontent.com/17949980/35078903-90963830-fc3f-11e7-8184-7438aaaa1657.gif" width="250">|<image src="https://user-images.githubusercontent.com/17949980/35079532-23b47e58-fc43-11e7-8a75-21eaeac65344.gif" width="250">|<image src="https://user-images.githubusercontent.com/17949980/35079615-a73f41b8-fc43-11e7-9640-56ca24e0dc6e.gif" width="250"> | <image src="https://user-images.githubusercontent.com/17949980/35079974-b3bebe1c-fc45-11e7-842a-22296ecfcc1b.gif" width="250">
 
-@implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-}
 
+## How To Use
+
+### Base
+
+``` Objective-C
 - (IBAction)alertTypeOneClicked {
     
     [MXAlertView showWithTopTitle:@"提示" bottomTitles:@[@"关闭播放"] content:@"你当前在4G模式，确定要播放？" dataSource:nil completionHandler:nil];
@@ -34,7 +28,7 @@
 
     [MXAlertView showWithTopTitle:@"提示" bottomTitles:@[@"关闭播放", @"继续播放", @"前去设置"] content:@"你当前在4G模式，确定要播放？" dataSource:nil completionHandler:^(int index, UIButton *sender) {
         
-        //selected index is the same index as title in the `bottomTitles`
+        //selected index is index in the `bottomTitles`
         if (index == 0) {
             //关闭播放
         } else if (index == 1) {
@@ -45,6 +39,12 @@
     }];
 }
 
+```
+
+### Custom
+set `dataSource` and implement method `accessoryViewForContentInMXAlertView` declared in `MXAlertViewDataSource` protocol
+ 
+``` Objective-C
 - (IBAction)alertTypeFourClicked {
     
     [MXAlertView showWithTopTitle:@"提示" bottomTitles:@[@"关闭播放", @"前去设置"] content:@"你当前在4G模式，确定要播放？" dataSource:self completionHandler:^(int index, UIButton *sender) {
@@ -78,4 +78,6 @@
     return accessoryView;
 }
 
-@end
+
+```
+

@@ -13,6 +13,8 @@
 		4CF448D12010298C0065611A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF448D02010298C0065611A /* Assets.xcassets */; };
 		4CF448D42010298C0065611A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF448D22010298C0065611A /* LaunchScreen.storyboard */; };
 		4CF448D72010298C0065611A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF448D62010298C0065611A /* main.m */; };
+		4CF448E020102A5C0065611A /* MXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF448DF20102A5C0065611A /* MXAlertView.m */; };
+		4CF448E220104EE50065611A /* 时钟.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF448E120104EE50065611A /* 时钟.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		4CF448D32010298C0065611A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CF448D52010298C0065611A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CF448D62010298C0065611A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CF448DE20102A5C0065611A /* MXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXAlertView.h; sourceTree = "<group>"; };
+		4CF448DF20102A5C0065611A /* MXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXAlertView.m; sourceTree = "<group>"; };
+		4CF448E120104EE50065611A /* 时钟.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "时钟.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,7 @@
 		4CF448BB2010298B0065611A = {
 			isa = PBXGroup;
 			children = (
+				4CF448DD20102A5C0065611A /* MXAlertView */,
 				4CF448C62010298C0065611A /* MXAlertView */,
 				4CF448C52010298C0065611A /* Products */,
 			);
@@ -58,6 +64,7 @@
 		4CF448C62010298C0065611A /* MXAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				4CF448E120104EE50065611A /* 时钟.png */,
 				4CF448C72010298C0065611A /* AppDelegate.h */,
 				4CF448C82010298C0065611A /* AppDelegate.m */,
 				4CF448CA2010298C0065611A /* ViewController.h */,
@@ -69,6 +76,16 @@
 				4CF448D62010298C0065611A /* main.m */,
 			);
 			path = MXAlertView;
+			sourceTree = "<group>";
+		};
+		4CF448DD20102A5C0065611A /* MXAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				4CF448DE20102A5C0065611A /* MXAlertView.h */,
+				4CF448DF20102A5C0065611A /* MXAlertView.m */,
+			);
+			name = MXAlertView;
+			path = MXAlertView/MXAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +148,7 @@
 			files = (
 				4CF448D42010298C0065611A /* LaunchScreen.storyboard in Resources */,
 				4CF448D12010298C0065611A /* Assets.xcassets in Resources */,
+				4CF448E220104EE50065611A /* 时钟.png in Resources */,
 				4CF448CF2010298C0065611A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF448E020102A5C0065611A /* MXAlertView.m in Sources */,
 				4CF448CC2010298C0065611A /* ViewController.m in Sources */,
 				4CF448D72010298C0065611A /* main.m in Sources */,
 				4CF448C92010298C0065611A /* AppDelegate.m in Sources */,
